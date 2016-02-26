@@ -12,7 +12,8 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var genreLabel: UILabel!
-//    @IBOutlet var recommendLabel: UILabel!
+//    var recommendLabel: UILabel!
+//    var memoLabel: UILabel!
     
 
     override func awakeFromNib() {

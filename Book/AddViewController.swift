@@ -21,7 +21,7 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     let saveData = NSUserDefaults.standardUserDefaults()
     
     //写真表示用ImageView
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var bookImageView: UIImageView!
     
     
     //カメラ、アルバムの呼び出しメソッド
@@ -47,7 +47,7 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
             self.dismissViewControllerAnimated(true, completion: nil)
             
             //画像出力
-            photoImageView.image = image
+            bookImageView.image = image
     }
     
     //写真を登録してくださいを押したときに呼び出されるメソッド
@@ -100,8 +100,8 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBAction func saveWord() {
         let bookDictionary =
         //"image":photoImageView.image!,
-        ["title":titleTextField.text!,"author":authorTextField.text!,"genre":genreTextField.text!,
-            "recommend":recommendTextField.text!,"memo":memoTextField.text!]
+        ["image":bookImageView.image!, "title":titleTextField.text!, "author":authorTextField.text!, "genre":genreTextField.text!,
+            "recommend":recommendTextField.text!, "memo":memoTextField.text!]
         
         bookArray.append (bookDictionary)
         saveData.setObject(bookArray, forKey: "BOOK")

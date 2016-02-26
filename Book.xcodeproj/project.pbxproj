@@ -110,9 +110,9 @@
 				005C2E1C1C798C7600B66CE2 /* AppDelegate.swift */,
 				005C2E521C79CC6700B66CE2 /* ViewController.swift */,
 				005C2E1E1C798C7600B66CE2 /* ListTableViewController.swift */,
+				005C2E541C7C241A00B66CE2 /* SubViewController.swift */,
 				005C2E4A1C7991DB00B66CE2 /* ListTableViewCell.swift */,
 				005C2E501C79AFA100B66CE2 /* AddViewController.swift */,
-				005C2E541C7C241A00B66CE2 /* SubViewController.swift */,
 				005C2E201C798C7600B66CE2 /* Main.storyboard */,
 				005C2E4B1C7991DB00B66CE2 /* ListTableViewCell.xib */,
 				005C2E231C798C7600B66CE2 /* Assets.xcassets */,
@@ -505,6 +505,7 @@
 				005C2E431C798C7600B66CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		005C2E441C798C7600B66CE2 /* Build configuration list for PBXNativeTarget "BookTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				005C2E461C798C7600B66CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		005C2E471C798C7600B66CE2 /* Build configuration list for PBXNativeTarget "BookUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +523,7 @@
 				005C2E491C798C7600B66CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

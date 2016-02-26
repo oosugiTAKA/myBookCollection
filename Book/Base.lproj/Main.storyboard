@@ -58,7 +58,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Yhj-wN-GOy">
-                                <rect key="frame" x="0.0" y="92" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yhj-wN-GOy" id="oXh-g2-8qI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -202,6 +202,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="authorTextField" destination="0bj-Of-Ns4" id="ISj-VS-i9K"/>
+                        <outlet property="bookImage" destination="cs7-0i-ZMh" id="Emj-hh-4NS"/>
+                        <outlet property="bookImageView" destination="cs7-0i-ZMh" id="rM7-Ln-vdS"/>
                         <outlet property="genreTextField" destination="Xpr-MS-nXw" id="Jqj-zv-S19"/>
                         <outlet property="memoTextField" destination="8Bm-6W-W8l" id="VRu-Wt-Tcq"/>
                         <outlet property="photoImageView" destination="cs7-0i-ZMh" id="naO-Xw-zww"/>
@@ -437,6 +439,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="authorTextField" destination="8wk-tU-1vK" id="YVt-v7-7GS"/>
+                        <outlet property="bookImage" destination="xfU-ag-Eom" id="g9G-eC-wJU"/>
+                        <outlet property="bookImageView" destination="xfU-ag-Eom" id="vnc-pD-gQ3"/>
                         <outlet property="genreTextField" destination="6kT-s8-pMq" id="Ce5-ez-PAN"/>
                         <outlet property="memoTextField" destination="pGA-CY-e86" id="rz1-S2-LcH"/>
                         <outlet property="photoImageView" destination="xfU-ag-Eom" id="zqS-pN-VYF"/>
