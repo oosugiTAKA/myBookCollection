@@ -9,17 +9,20 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
-    
-    var titleLabel: UILabel!
-    var authorLabel:UILabel!
-    var genreLabel:UILabel!
-    var recommendLabel: UILabel!
-    var memoLabel: UILabel!
+//    
+//    var titleLabel: UILabel!
+//    var authorLabel:UILabel!
+//    var genreLabel:UILabel!
+//    var recommendLabel: UILabel!
+//    var memoLabel: UILabel!
+//    var bookImage: UIImageView!
     
     var cellNum: Int = 0
     
     
     var bookArray: [AnyObject] = []
+    var bookImage: [AnyObject] = []
+
     let saveData = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
@@ -41,7 +44,6 @@ class ListTableViewController: UITableViewController {
         if saveData.arrayForKey("BOOK") != nil {
             bookArray = saveData.arrayForKey("BOOK")!
         }
-        
         tableView.reloadData()
     
     }
@@ -65,13 +67,11 @@ class ListTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:
                 indexPath) as! ListTableViewCell
             
-            var nowIndexPathDictionary: (AnyObject) = bookArray[indexPath.row]
+            let nowIndexPathDictionary: (AnyObject) = bookArray[indexPath.row]
             
             cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
             cell.authorLabel.text = nowIndexPathDictionary["author"] as? String
             cell.genreLabel.text = nowIndexPathDictionary["genre"] as? String
-//            cell.recommendLabel.text = nowIndexPathDictionary["recommend"] as? String
-//            cell.memoLabel.text = nowIndexPathDictionary["memo"] as? String
             
 
             
@@ -82,14 +82,10 @@ class ListTableViewController: UITableViewController {
     // Cell が選択された場合
     override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
                     // SubViewController へ遷移するために Segue を呼び出す
-//            print(indexPath.row)
+//print(indexPath.row)
             cellNum = indexPath.row
 
             performSegueWithIdentifier("toSubViewController",sender: nil)
-        
-//        let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-//        appDelegate.cellNum = indexPath.row
-//celNum = indexPath.row
         
     }
     
@@ -97,19 +93,13 @@ class ListTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toSubViewController") {
             
-            var subViewController:SubViewController = segue.destinationViewController as! SubViewController
+            let subViewController:SubViewController = segue.destinationViewController as! SubViewController
             subViewController.bookArray = self.bookArray
             subViewController.cellNumber = self.cellNum
+            subViewController.bookImage = self.bookImage
 
-        print(cellNum)
             
             
-//            subViewController.paramtitle = self.titleLabel.text!
-//            subViewController.paramauthor = self.authorLabel.text!
-//            subViewController.paramgenre = self.genreLabel.text!
-//            subViewController.paramrecommend = self.recommendLabel.text!
-//            subViewController.parammemo = self.memoLabel.text!
-//
                 }
     }
     

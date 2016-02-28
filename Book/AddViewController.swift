@@ -16,12 +16,16 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet var genreTextField: UITextField!
     @IBOutlet var recommendTextField: UITextField!
     @IBOutlet var memoTextField: UITextField!
+    @IBOutlet weak var bookImageView: UIImageView!
     
+    var image: UIImage!
     var bookArray: [AnyObject] = []
+    let bookDictionary: [Any] = []
     let saveData = NSUserDefaults.standardUserDefaults()
     
+    
     //写真表示用ImageView
-    @IBOutlet weak var bookImageView: UIImageView!
+
     
     
     //カメラ、アルバムの呼び出しメソッド
@@ -98,10 +102,15 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     
     //保存ボタンが押された時のsaveWord()メソッドの記述
     @IBAction func saveWord() {
-        let bookDictionary =
-        //"image":photoImageView.image!,
-        ["image":bookImageView.image!, "title":titleTextField.text!, "author":authorTextField.text!, "genre":genreTextField.text!,
-            "recommend":recommendTextField.text!, "memo":memoTextField.text!]
+        
+        let imageData = bookImageView.image
+        let data = UIImagePNGRepresentation(imageData!)
+        
+//        saveData.setObject(data, forKey:"image")
+//        saveData.synchronize()
+//        print(saveData.arrayForKey("image"))
+        
+        let bookDictionary = ["title":titleTextField.text!, "author":authorTextField.text!, "genre":genreTextField.text!,"recommend":recommendTextField.text!,"memo":memoTextField.text!, "image":data! as NSData]
         
         bookArray.append (bookDictionary)
         saveData.setObject(bookArray, forKey: "BOOK")

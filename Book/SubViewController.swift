@@ -17,8 +17,10 @@ class SubViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var recommendLabel: UILabel!
     @IBOutlet weak var memoLabel: UILabel!
+    @IBOutlet weak var bookImageView: UIImageView!
     
     var bookArray: [AnyObject] = []
+    var bookImage: [AnyObject] = []
 
 
 
@@ -34,21 +36,24 @@ class SubViewController: UIViewController {
         // Do any additional setup after loading the view.
         bookArray = saveData.arrayForKey("BOOK")!
         
-        //letのところでappDelegate変数定義？
-//        let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-//        cellNumber = appDelegate.cellNum
+        
         self.titleLabel.text = self.bookArray[cellNumber]["title"] as? String
         self.authorLabel.text = self.bookArray[cellNumber]["author"] as? String
         self.genreLabel.text = self.bookArray[cellNumber]["genre"] as? String
         self.recommendLabel.text = self.bookArray[cellNumber]["recommend"] as? String
         self.memoLabel.text = self.bookArray[cellNumber]["memo"] as? String
         
+        let imageData: NSData = self.bookArray[cellNumber]["image"] as! NSData
+        self.bookImageView.image = UIImage(data: imageData)
+        
+//        self.bookImageView.image = self.bookArray[cellNumber]["image"] as? String
+        
 //        titleLabel.text = bookArray[cellNumber]["title"] as? String
 //        authorLabel.text = bookArray[cellNumber]["author"] as? String
 //        genreLabel.text = bookArray[cellNumber]["genre"] as? String
 //        recommendLabel.text = bookArray[cellNumber]["recommend"] as? String
 //        memoLabel.text = bookArray[cellNumber]["memo"] as? String
-
+        
     }
 
     
