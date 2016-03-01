@@ -12,6 +12,7 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var genreLabel: UILabel!
+
 //    var recommendLabel: UILabel!
 //    var memoLabel: UILabel!
     

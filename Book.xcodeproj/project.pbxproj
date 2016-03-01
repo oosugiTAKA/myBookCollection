@@ -19,6 +19,16 @@
 		005C2E511C79AFA100B66CE2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C2E501C79AFA100B66CE2 /* AddViewController.swift */; };
 		005C2E531C79CC6700B66CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C2E521C79CC6700B66CE2 /* ViewController.swift */; };
 		005C2E551C7C241A00B66CE2 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C2E541C7C241A00B66CE2 /* SubViewController.swift */; };
+		005C2E591C83404500B66CE2 /* 本のアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E581C83404500B66CE2 /* 本のアイコン.png */; };
+		005C2E5D1C858A6400B66CE2 /* カメラアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E5C1C858A6400B66CE2 /* カメラアイコン.png */; };
+		005C2E611C858C9400B66CE2 /* ＋.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E601C858C9400B66CE2 /* ＋.png */; };
+		005C2E631C85926400B66CE2 /* しきり.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E621C85926400B66CE2 /* しきり.png */; };
+		005C2E651C85D4A500B66CE2 /* ふち.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E641C85D4A500B66CE2 /* ふち.png */; };
+		005C2E671C85D86000B66CE2 /* 木の画像.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E661C85D86000B66CE2 /* 木の画像.png */; };
+		005C2E691C85D86A00B66CE2 /* 枠.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E681C85D86A00B66CE2 /* 枠.png */; };
+		005C2E6B1C85EBA300B66CE2 /* 木の背景２.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E6A1C85EBA300B66CE2 /* 木の背景２.png */; };
+		005C2E6D1C85EBAB00B66CE2 /* 木の背景１.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E6C1C85EBAB00B66CE2 /* 木の背景１.png */; };
+		005C2E6F1C85ECAC00B66CE2 /* 木の背景３.png in Resources */ = {isa = PBXBuildFile; fileRef = 005C2E6E1C85ECAC00B66CE2 /* 木の背景３.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +67,16 @@
 		005C2E501C79AFA100B66CE2 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		005C2E521C79CC6700B66CE2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		005C2E541C7C241A00B66CE2 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		005C2E581C83404500B66CE2 /* 本のアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "本のアイコン.png"; sourceTree = "<group>"; };
+		005C2E5C1C858A6400B66CE2 /* カメラアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "カメラアイコン.png"; sourceTree = "<group>"; };
+		005C2E601C858C9400B66CE2 /* ＋.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "＋.png"; sourceTree = "<group>"; };
+		005C2E621C85926400B66CE2 /* しきり.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "しきり.png"; sourceTree = "<group>"; };
+		005C2E641C85D4A500B66CE2 /* ふち.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ふち.png"; sourceTree = "<group>"; };
+		005C2E661C85D86000B66CE2 /* 木の画像.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "木の画像.png"; sourceTree = "<group>"; };
+		005C2E681C85D86A00B66CE2 /* 枠.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "枠.png"; sourceTree = "<group>"; };
+		005C2E6A1C85EBA300B66CE2 /* 木の背景２.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "木の背景２.png"; sourceTree = "<group>"; };
+		005C2E6C1C85EBAB00B66CE2 /* 木の背景１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "木の背景１.png"; sourceTree = "<group>"; };
+		005C2E6E1C85ECAC00B66CE2 /* 木の背景３.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "木の背景３.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +127,16 @@
 		005C2E1B1C798C7600B66CE2 /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				005C2E6E1C85ECAC00B66CE2 /* 木の背景３.png */,
+				005C2E6A1C85EBA300B66CE2 /* 木の背景２.png */,
+				005C2E6C1C85EBAB00B66CE2 /* 木の背景１.png */,
+				005C2E661C85D86000B66CE2 /* 木の画像.png */,
+				005C2E681C85D86A00B66CE2 /* 枠.png */,
+				005C2E641C85D4A500B66CE2 /* ふち.png */,
+				005C2E621C85926400B66CE2 /* しきり.png */,
+				005C2E601C858C9400B66CE2 /* ＋.png */,
+				005C2E5C1C858A6400B66CE2 /* カメラアイコン.png */,
+				005C2E581C83404500B66CE2 /* 本のアイコン.png */,
 				005C2E1C1C798C7600B66CE2 /* AppDelegate.swift */,
 				005C2E521C79CC6700B66CE2 /* ViewController.swift */,
 				005C2E541C7C241A00B66CE2 /* SubViewController.swift */,
@@ -247,9 +277,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005C2E691C85D86A00B66CE2 /* 枠.png in Resources */,
+				005C2E631C85926400B66CE2 /* しきり.png in Resources */,
+				005C2E671C85D86000B66CE2 /* 木の画像.png in Resources */,
+				005C2E6B1C85EBA300B66CE2 /* 木の背景２.png in Resources */,
 				005C2E271C798C7600B66CE2 /* LaunchScreen.storyboard in Resources */,
 				005C2E4D1C7991DB00B66CE2 /* ListTableViewCell.xib in Resources */,
+				005C2E6F1C85ECAC00B66CE2 /* 木の背景３.png in Resources */,
+				005C2E611C858C9400B66CE2 /* ＋.png in Resources */,
+				005C2E651C85D4A500B66CE2 /* ふち.png in Resources */,
 				005C2E241C798C7600B66CE2 /* Assets.xcassets in Resources */,
+				005C2E5D1C858A6400B66CE2 /* カメラアイコン.png in Resources */,
+				005C2E6D1C85EBAB00B66CE2 /* 木の背景１.png in Resources */,
+				005C2E591C83404500B66CE2 /* 本のアイコン.png in Resources */,
 				005C2E221C798C7600B66CE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

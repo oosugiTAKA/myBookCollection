@@ -72,7 +72,6 @@ class ListTableViewController: UITableViewController {
             cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
             cell.authorLabel.text = nowIndexPathDictionary["author"] as? String
             cell.genreLabel.text = nowIndexPathDictionary["genre"] as? String
-            
 
             
             return cell

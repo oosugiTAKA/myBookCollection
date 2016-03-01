@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     
    //文書表示用TextField
     @IBOutlet var titleTextField: UITextField!
@@ -22,10 +22,6 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     var bookArray: [AnyObject] = []
     let bookDictionary: [Any] = []
     let saveData = NSUserDefaults.standardUserDefaults()
-    
-    
-    //写真表示用ImageView
-
     
     
     //カメラ、アルバムの呼び出しメソッド
@@ -85,6 +81,9 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     override func viewDidLoad() {//最初に画面が呼び出された時どんな動作をするか決めるもの
         super.viewDidLoad()
         
+        
+        titleTextField.delegate = self
+        
         // Do any additional setup after loading the view.
         
         //NSUserDefaultsから配列の読み込み
@@ -92,6 +91,21 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
             bookArray = saveData.arrayForKey("BOOK")!
         }
     }
+    
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,9 +120,9 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
         let imageData = bookImageView.image
         let data = UIImagePNGRepresentation(imageData!)
         
-//        saveData.setObject(data, forKey:"image")
-//        saveData.synchronize()
-//        print(saveData.arrayForKey("image"))
+        saveData.setObject(data, forKey:"image")
+        saveData.synchronize()
+        print(saveData.arrayForKey("image"))
         
         let bookDictionary = ["title":titleTextField.text!, "author":authorTextField.text!, "genre":genreTextField.text!,"recommend":recommendTextField.text!,"memo":memoTextField.text!, "image":data! as NSData]
         
