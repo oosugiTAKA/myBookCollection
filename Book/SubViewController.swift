@@ -46,14 +46,6 @@ class SubViewController: UIViewController {
         let imageData: NSData = self.bookArray[cellNumber]["image"] as! NSData
         self.bookImageView.image = UIImage(data: imageData)
         
-//        self.bookImageView.image = self.bookArray[cellNumber]["image"] as? String
-        
-//        titleLabel.text = bookArray[cellNumber]["title"] as? String
-//        authorLabel.text = bookArray[cellNumber]["author"] as? String
-//        genreLabel.text = bookArray[cellNumber]["genre"] as? String
-//        recommendLabel.text = bookArray[cellNumber]["recommend"] as? String
-//        memoLabel.text = bookArray[cellNumber]["memo"] as? String
-        
     }
 
     
@@ -61,8 +53,6 @@ class SubViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -72,5 +62,4 @@ class SubViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

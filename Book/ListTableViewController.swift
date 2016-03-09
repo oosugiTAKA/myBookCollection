@@ -9,13 +9,6 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
-//    
-//    var titleLabel: UILabel!
-//    var authorLabel:UILabel!
-//    var genreLabel:UILabel!
-//    var recommendLabel: UILabel!
-//    var memoLabel: UILabel!
-//    var bookImage: UIImageView!
     
     var cellNum: Int = 0
     
@@ -72,7 +65,6 @@ class ListTableViewController: UITableViewController {
             cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
             cell.authorLabel.text = nowIndexPathDictionary["author"] as? String
             cell.genreLabel.text = nowIndexPathDictionary["genre"] as? String
-
             
             return cell
     }

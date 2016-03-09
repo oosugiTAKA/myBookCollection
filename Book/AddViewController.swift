@@ -83,6 +83,10 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
         
         
         titleTextField.delegate = self
+        authorTextField.delegate = self
+        genreTextField.delegate = self
+        recommendTextField.delegate = self
+        memoTextField.delegate = self
         
         // Do any additional setup after loading the view.
         
