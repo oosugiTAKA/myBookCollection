@@ -18,6 +18,9 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet var memoTextField: UITextField!
     @IBOutlet weak var bookImageView: UIImageView!
     
+    @IBOutlet weak var scvBackGround: UIScrollView!
+    
+    var txtActiveField = UITextField()
     var image: UIImage!
     var bookArray: [AnyObject] = []
     let bookDictionary: [Any] = []
@@ -77,6 +80,39 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     }
 
 
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        txtActiveField = textField
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    
+    
+    
+    func handleKeyboardWillShowNotification(notification: NSNotification) {
+        
+        let userInfo = notification.userInfo!
+        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        
+        let txtLimit = txtActiveField.frame.origin.y + txtActiveField.frame.height + 8.0
+        let kbdLimit = myBoundSize.height - keyboardScreenEndFrame.size.height
+        
+        print("テキストフィールドの下辺：\(txtLimit)")
+        print("キーボードの上辺：\(kbdLimit)")
+        
+        if txtLimit >= kbdLimit {
+            scvBackGround.contentOffset.y = txtLimit - kbdLimit
+        }
+    }
+    
+    func handleKeyboardWillHideNotification(notification: NSNotification) {
+        scvBackGround.contentOffset.y = 0
+    }
+    
     
     override func viewDidLoad() {//最初に画面が呼び出された時どんな動作をするか決めるもの
         super.viewDidLoad()
@@ -98,13 +134,13 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
     
     
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool{
-        
-        // キーボードを閉じる
-        textField.resignFirstResponder()
-        
-        return true
-    }
+//    func textFieldShouldReturn(textField: UITextField) -> Bool{
+//        
+//        // キーボードを閉じる
+//        textField.resignFirstResponder()
+//        
+//        return true
+//    }
     
     
     
@@ -153,6 +189,25 @@ class AddViewController: UIViewController, UINavigationControllerDelegate, UIIma
         recommendTextField.text = ""
         memoTextField.text = ""
 
+    }
+    
+    
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
 
     /*
